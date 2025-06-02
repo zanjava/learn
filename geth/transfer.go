@@ -4,21 +4,21 @@ import (
 	"context"
 	"crypto/ecdsa"
 	"fmt"
-	"log"
-	"math/big"
-
-	"golang.org/x/crypto/sha3"
-
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
+	"golang.org/x/crypto/sha3"
+	"log"
+	"math/big"
 )
 
-func main() {
-
+/*
+*代币转账
+ */
+func nftTransfer() {
 	// 代币转账
 	client, err := ethclient.Dial("https://sepolia.infura.io/v3/9cbc77586cd54219823a4c2a6d4d3cb6")
 	if err != nil {
